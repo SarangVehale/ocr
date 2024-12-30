@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ocr-app:
+    build: .
+    volumes:
+      - ./images:/app/images
+      - ./ocr_outputs:/app/ocr_outputs
+    environment:
+      - DISPLAY=${DISPLAY}
+
